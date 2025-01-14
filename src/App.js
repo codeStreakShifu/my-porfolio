@@ -1,4 +1,5 @@
-import { Pages } from '@mui/icons-material';
+// import { icon } from '@mui/icons-material';
+import { Pages } from './components/pages/Pages';
 import './App.css';
 
 function App() {

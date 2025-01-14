@@ -1,30 +1,19 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Header } from "../common/Header";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+const About = () => <h1>About Page</h1>;
+const Users = () => <h1>Users Page</h1>;
 
 export const Pages = () => {
-    return (
-        <>
-    <Router>
-     
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          {/* <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>*/}
-         
-        </Switch>
-
-    </Router>
-    </>
-    );
-}
+  return (
+    <BrowserRouter>
+      <Header />
+      {/* Using Routes and Route as expected in v7 */}
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/users" element={<Users />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
