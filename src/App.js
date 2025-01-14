@@ -1,11 +1,13 @@
+import { Pages } from '@mui/icons-material';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>My Portfolio</h1>
+    <div>
+      <Pages/>
     </div>
-  );
+  
+  )
 }
 
 export default App;
